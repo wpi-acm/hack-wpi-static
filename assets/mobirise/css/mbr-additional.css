@@ -682,14 +682,8 @@ body {
 a {
   transition: color 0.6s;
 }
-.cid-sgPI0rTtnd {
-  z-index: 1000;
-  width: 100%;
-  position: relative;
-  min-height: 60px;
-}
-.cid-sgPI0rTtnd nav.navbar {
-  position: fixed;
+.cid-sgPI0rTtnd .navbar-dropdown {
+  position: relative !important;
 }
 .cid-sgPI0rTtnd .dropdown-item:before {
   font-family: Moririse2 !important;
@@ -1000,7 +994,6 @@ a {
 }
 .cid-sgPI0rTtnd .navbar-dropdown {
   padding: 0 1rem;
-  position: fixed;
 }
 .cid-sgPI0rTtnd a.nav-link {
   display: flex;
