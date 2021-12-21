@@ -1468,12 +1468,12 @@ a {
   color: #ffffff;
 }
 .cid-sSbzGEQBii {
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   background-color: #003049;
 }
 .cid-sSbzGEQBii .line {
-  background-color: #ffffff;
+  background-color: #003049;
   align: center;
   height: 2px;
   margin: 0 auto;
@@ -1482,8 +1482,8 @@ a {
   color: #ffffff;
 }
 .cid-sSbz0cYySb {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   background-color: #003049;
 }
 @media (max-width: 991px) {
@@ -1496,6 +1496,9 @@ a {
 }
 .cid-sSbz0cYySb img {
   width: 100%;
+}
+.cid-sSbz0cYySb .mbr-description {
+  color: #ffffff;
 }
 .cid-sjARbWRr21 {
   padding-top: 4rem;
