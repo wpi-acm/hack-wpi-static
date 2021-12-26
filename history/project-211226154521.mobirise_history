@@ -1,6 +1,6 @@
 {
   "settings": {
-    "name": "Hack@WPI 2021",
+    "name": "Hack@WPI 2022",
     "currentPage": "index.html",
     "theme": {
       "name": "mobirise5",
@@ -82,9 +82,11 @@
     "cookiesAlert": false,
     "gdpr": false,
     "uniqCompNum": 33,
-    "versionPublish": "5.3.5",
+    "versionPublish": "5.5.2",
     "screenshot": "screenshot.png",
-    "mbrsiteDomain": "trk4h3nzrc"
+    "mbrsiteDomain": "trk4h3nzrc",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
@@ -568,17 +570,59 @@
                 "padding": "4rem"
               }
             },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".card-title, .card-box": {
+              "text-align": "center"
+            }
+          },
+          "_name": "content15",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content15\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"4\" max=\"12\" step=\"1\" value=\"9\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#4479d9\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#003049\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-box align-left\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-white mb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n                            <b>IMPORTANT: This is a Hybrid Event</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">WPI students can attend the event in-person in the top floor of the Rubin Campus Center. <br><br><b>External participants (e.g. participants from other schools, states, etc.) can only participate in Hack@WPI 2022 virtually due to COVID-19 restrictions.</b><br><br>By registering, you acknowledge the format of the event and will participate either in-person or virtually strictly based on whether or not you attend WPI.&nbsp;</p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start\n                                Now</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sStOxVNFn6",
+          "_anchor": "content15-w",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "border-radius": "4px",
+              "@media (max-width: 767px)": {
+                "padding": "1rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
             ".card-title": {
               "color": "#fdf0d5"
             },
             ".mbr-text, .mbr-section-btn": {
-              "color": "#ffffff",
-              "text-align": "center"
+              "color": "#fdf0d5"
             }
           },
           "_name": "header12",
           "_sourceTheme": "mobirise5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header12\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#f05165\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#003049\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"card col-12 col-md-12 col-lg-9\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-box align-center\">\n                        <h1 class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            <b>Register here!</b></h1>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b><i><u>ATTENTION HACKERS<br></u></i>Due to COVID-19 restrictions, in-person participation will be limited to WPI students that are part of the testing protocol. Non-WPI hackers, and WPI students not cleared to be on campus are invited to participate virtually<br></b>If you have any questions, please don't hesitate to reach out to us at <a href=\"mailto:hack@wpi.edu\" class=\"text-info\">hack@wpi.edu</a><br><br>This event will be run according to the <a href=\"https://static.mlh.io/docs/mlh-code-of-conduct.pdf\" class=\"text-info text-primary\" target=\"_blank\">MLH Code of Conduct</a>.<br><br>After clicking the link below, keep filling out all of the fields until you reach the end. <br>You should also join our <a href=\"https://join.slack.com/t/wpi-rqw4180/shared_invite/zt-1089kvjx1-3b6v152r6a_fX7NS8EGL9g\" class=\"text-info\" target=\"_blank\">Slack</a> once you've registered!<br><br>If you have any questions or are interested in sponsoring Hack@WPI 2022, please reach out to our organizer team at <a href=\"mailto:hack@wpi.edu\" class=\"text-info\">hack@wpi.edu</a>! There's also an <a href=\"index.html#content14-n\" class=\"text-info\">FAQ section</a> at the bottom of this page.</p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"http://hack.wpi.edu/register\" data-app-placeholder=\"Type Text\" target=\"_blank\">Click here to register through MLH</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header12\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#f05165\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#003049\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"card col-12 col-md-12 col-lg-9\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-box align-center\">\n                        <h1 class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            <b>Register here!</b></h1>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">This event will be run according to the <a href=\"https://static.mlh.io/docs/mlh-code-of-conduct.pdf\" class=\"text-info text-primary\" target=\"_blank\">MLH Code of Conduct</a>.<br><br>After clicking the link below, keep filling out all of the fields until you reach the end. <br>You should also join our <a href=\"https://join.slack.com/t/wpi-rqw4180/shared_invite/zt-1089kvjx1-3b6v152r6a_fX7NS8EGL9g\" class=\"text-info\" target=\"_blank\">Slack</a> once you've registered!<br><br>If you have any questions or are interested in sponsoring Hack@WPI 2022, please reach out to our organizer team at <a href=\"mailto:hack@wpi.edu\" class=\"text-primary\">hack@wpi.edu</a>! There's also an <a href=\"index.html#content14-n\" class=\"text-info\">FAQ section</a> at the bottom of this page.</p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"http://hack.wpi.edu/register\" data-app-placeholder=\"Type Text\" target=\"_blank\">Click here to register through MLH</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "sgPJIlmBEv",
           "_anchor": "header12-2",
           "_protectedParams": [],
