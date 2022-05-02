@@ -1351,12 +1351,17 @@ a {
   color: #fdf0d5;
 }
 .cid-sU9iJiwiKR {
-  padding-top: 1rem;
+  padding-top: 4rem;
   padding-bottom: 8rem;
   background-color: #003049;
 }
 .cid-sU9iJiwiKR .mbr-section-title {
   color: #ffffff;
+}
+.cid-sU9iJiwiKR .mbr-text,
+.cid-sU9iJiwiKR .mbr-section-btn {
+  color: #ffffff;
+  text-align: center;
 }
 .cid-sU99xA04eV {
   padding-top: 5rem;
