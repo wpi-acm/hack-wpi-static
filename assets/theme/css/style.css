@@ -8,6 +8,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #232323;
+  background-color: #171717;
   position: relative;
 }
 
@@ -40,9 +41,7 @@ a {
   font-weight: 400;
   cursor: pointer;
 }
-a, a:hover {
-  text-decoration: none;
-}
+
 
 .mbr-section-title {
   font-style: normal;
