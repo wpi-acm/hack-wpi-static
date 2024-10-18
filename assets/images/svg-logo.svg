@@ -7,6 +7,32 @@
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
 </metadata>
+
+  	<defs>
+
+	<filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
+		<!-- Thicken out the original shape -->
+		<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+
+		<!-- Use a gaussian blur to create the soft blurriness of the glow -->
+		<feGaussianBlur in="thicken" stdDeviation="25" result="blurred" />
+
+		<!-- Change the colour -->
+		<feFlood flood-color="rgb(239 68 68)" result="glowColor" />
+
+		<!-- Color in the glows -->
+		<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+		<!--	Layer the effects together -->
+		<feMerge>
+			<feMergeNode in="softGlow_colored"/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+
+	</filter>
+
+</defs>
+
 <g transform="translate(0.000000,358.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
 <path d="M630 3255 c-18 -42 -31 -77 -29 -80 2 -2 26 1 52 7 27 5 50 8 53 6
@@ -180,28 +206,30 @@ c-46 -131 -90 -255 -97 -276 -26 -83 -17 -23 25 153 24 102 49 213 55 246 11
 -15 -66 -27 -118 -11 -51 -27 -120 -34 -153 -8 -33 -20 -91 -26 -130 -13 -75
 -34 -118 -24 -50 6 41 25 347 25 400 0 24 7 34 38 51 49 29 55 29 48 0z m-144
 -8 l39 -12 -7 -179 c-8 -192 -9 -222 -13 -264 -2 -20 -67 403 -71 460 0 10 6
-9 52 -5z"/>
+9 52 -5z"
+filter="url(#sofGlow)"
+/>
 <path d="M789 3268 c0 -7 -2 -20 -3 -28 -2 -8 -6 -51 -9 -95 -4 -58 -3 -70 3
--45 12 46 24 180 16 180 -3 0 -6 -6 -7 -12z"/>
+-45 12 46 24 180 16 180 -3 0 -6 -6 -7 -12z" filter="url(#sofGlow)" />
 <path d="M2152 3255 c3 -3 63 -7 134 -10 90 -3 116 -1 84 5 -49 9 -227 13
--218 5z"/>
+-218 5z" filter="url(#sofGlow)" />
 <path d="M2600 3229 c44 -10 126 -9 108 2 -7 5 -42 8 -78 8 -58 -1 -61 -2 -30
--10z"/>
+-10z" filter="url(#sofGlow)" />
 <path d="M2354 2288 c-26 -24 -64 -60 -82 -80 -38 -43 -58 -48 -67 -18 -3 11
 -11 20 -16 20 -6 0 -3 -10 5 -22 19 -26 20 -38 6 -38 -16 0 -274 -101 -285
 -112 -15 -14 42 2 105 30 126 56 133 52 20 -14 -44 -25 -83 -50 -86 -56 -7
 -10 50 21 131 71 22 14 81 47 130 73 50 27 79 46 65 42 -18 -5 -3 15 55 69 86
-82 99 104 19 35z"/>
+82 99 104 19 35z" filter="url(#sofGlow)" />
 <path d="M1240 1408 c-61 -98 -111 -176 -209 -331 -35 -54 -61 -101 -58 -104
 3 -3 27 29 54 72 26 42 67 105 90 141 90 140 165 266 160 270 -2 3 -19 -19
--37 -48z"/>
+-37 -48z" filter="url(#sofGlow)" />
 <path d="M963 850 c18 -45 77 -139 77 -123 0 12 -66 132 -82 148 -5 6 -3 -6 5
--25z"/>
+-25z" filter="url(#sofGlow)" />
 <path d="M206 2261 c6 -6 33 -20 60 -30 58 -22 220 -88 249 -101 34 -15 96
 -32 101 -28 2 3 -14 11 -36 18 -34 11 -39 17 -34 34 6 20 5 20 -8 2 -13 -16
 -17 -17 -39 -5 -13 7 -26 14 -29 14 -13 4 -67 26 -82 35 -10 6 -22 10 -28 10
--5 0 -33 11 -62 24 -70 31 -107 42 -92 27z"/>
+-5 0 -33 11 -62 24 -70 31 -107 42 -92 27z" filter="url(#sofGlow)" />
 <path d="M1561 1084 c-1 -12 10 -75 23 -140 13 -66 27 -137 31 -159 4 -22 10
--34 12 -27 3 7 -3 54 -12 105 -10 51 -19 103 -21 117 -9 50 -32 124 -33 104z"/>
+-34 12 -27 3 7 -3 54 -12 105 -10 51 -19 103 -21 117 -9 50 -32 124 -33 104z" filter="url(#sofGlow)" />
 </g>
 </svg>
