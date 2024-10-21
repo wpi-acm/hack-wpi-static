@@ -995,10 +995,6 @@ blockquote {
   display: none;
 }
 
-.dropdown-item:hover + .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
-}
 
 @media (min-aspect-ratio: 16/9) {
   .mbr-video-foreground {

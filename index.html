@@ -79,12 +79,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    
+
   </head>
-  <body>
+  <body onload="init()">
+    <script type="text/javascript" src="assets/countdown/script.js"></script>
   
       <div class="flex text-3xl border-zinc-700 fixed w-screen border-b z-50 text-white game-font items-center justify-center flex-row py-3 pl-2 pr-40" style="background-color: #171717"> 
         <a href="https://hack.wpi.edu" class="ml-4 ">
@@ -146,6 +148,30 @@
       </div>
     </section>
 
+    <section>
+      <div class="countdown has-animation fadeInUp text-white bg-[#171717] mb-20 game-font  flex flex-row justify-center items-center" data-date="Jan 17 2025 20:00:00">
+        <div class="counter flex flex-col justify-center items-center mr-16">
+          <span class="value text-6xl text-red-500" data-days>-</span>
+          <span class="suffix text-5xl">Days</span>
+        </div>
+      
+        <div class="counter flex flex-col justify-center items-center mr-16">
+          <span class="value text-6xl text-red-500" data-hours>-</span>
+          <span class="suffix text-5xl  ">Hours</span>
+        </div>
+      
+        <div class="counter flex flex-col justify-center items-center mr-16">
+          <span class="value text-6xl text-red-500" data-minutes>-</span>
+          <span class="suffix text-5xl">Mins</span>
+        </div>
+      
+        <div class="counter flex flex-col justify-center items-center mr-16">
+          <span class="value text-6xl text-red-500" data-seconds>-</span>
+          <span class="suffix text-5xl">Secs</span>
+        </div>
+      </div>
+    </section>
+
 
     <section
       data-bs-version="5.1"
@@ -165,7 +191,7 @@
         </div>
         <div class="flex items-end pl-32 pr-16 justify-center flex-col">
           <h1 class=" text-right text-red-500 text-7xl mb-4  game-font">BUILD ANYTHING.</h1>
-          <p class="text-right text-white text-2xl font-semibold">At GoatHacks, the sky is the limit with what you can create. We support all projects, virtual or physical, and will the resources you need to help you build your project.</p>
+          <p class="text-right text-white text-3xl font-semibold game-font">At GoatHacks, the sky is the limit with what you can create. We support all projects, virtual or physical, and will the resources you need to help you build your project.</p>
         </div>
       </div>
 
@@ -173,7 +199,7 @@
     
         <div class="flex items-start pr-32 pl-16 justify-center flex-col">
           <h1 class=" text-left text-red-500 text-7xl mb-4  game-font">COLLABORATE.</h1>
-          <p class="text-left text-white text-2xl font-semibold">Find your people at GoatHacks. Come with a team, or find a new one at our event! (Or go solo, if that's your thing).</p>
+          <p class="text-left text-white text-3xl font-semibold game-font">Find your people at GoatHacks. Come with a team, or find a new one at our event! (Or go solo, if that's your thing).</p>
         </div>
 
         <div class="pl-2">
@@ -195,7 +221,7 @@
         </div>
         <div class="flex items-end pl-32 pr-16 justify-center flex-col">
           <h1 class=" text-right text-red-500 text-7xl mb-4  game-font">LEARN.</h1>
-          <p class="text-right text-white text-2xl font-semibold">Whether you're a seasoned hacker or starting for the first time, we've got you covered. We'll be hosting workshops and events from industry experts to help you learn new skills and reinforce existing ones.</p>
+          <p class="text-right text-white text-3xl font-semibold game-font">Whether you're a seasoned hacker or starting for the first time, we've got you covered. We'll be hosting workshops and events from industry experts to help you learn new skills and reinforce existing ones.</p>
         </div>
       </div>
       
@@ -369,10 +395,10 @@
       <div class="align-center container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
-            <h3 class="mbr-section-title mb-4 mbr-fonts-style display-2">
+            <h3 class="mbr-section-title mb-4 text-4xl game-font">
               <strong><br /></strong><strong>Looking to Sponsor?</strong>
             </h3>
-            <p class="mbr-text mb-5 mbr-fonts-style display-7">
+            <p class="mbr-text mb-5 game-font text-3xl">
               <strong>
                 See our sponsor packet below and reach out to us <a class="underline" href="mailto:hack@wpi.edu">here!</a>
               </strong>
@@ -382,7 +408,9 @@
                 class="btn btn-secondary display-4"
                 href="https://drive.google.com/file/d/1L-CZgCxPZmOMpFBy67rTB6ED6lq8v3au/view?usp=sharing"
                 target="_blank"
-                >Sponsorship Packet</a
+                >
+                <h1 class="game-font text-2xl">Sponsorship Packet</h1>
+                </a
               >
             </div>
           </div>
@@ -409,7 +437,7 @@
 
             <div
               id="bootstrap-toggle"
-              class="toggle-panel accordionStyles tab-content"
+              class="toggle-panel accordionStyles tab-content "
             >
               <div class="card mb-3">
                 <div class="card-header" role="tab" id="headingOne">
@@ -424,7 +452,7 @@
                     aria-controls="collapse1"
                   >
                     <h6
-                      class="text-white panel-title-edit mbr-fonts-style mb-0 display-7"
+                      class="text-white game-font panel-title-edit mb-0 text-4xl"
                     >
                       <strong>Will there be food or refreshments?</strong>
                     </h6>
@@ -441,7 +469,7 @@
                   style="visibility: visible;"
                 >
                   <div class="panel-body">
-                    <p class="mbr-fonts-style panel-text display-7 text-white">
+                    <p class="text-2xl text-gray-300 game-font panel-text">
                       Yes, we will be providing food and refreshments for all
                       attendants, more information to come!
                     </p>
@@ -461,7 +489,7 @@
                     aria-controls="collapse2"
                   >
                     <h6
-                      class="panel-title-edit mbr-fonts-style mb-0 display-7 text-white"
+                      class="text-white game-font panel-title-edit mb-0 text-4xl"
                     >
                       <strong>Who can attend?&nbsp;</strong>
                     </h6>
@@ -478,7 +506,7 @@
                   style="visibility: visible;"
                 >
                   <div class="panel-body">
-                    <p class="mbr-fonts-style panel-text display-7 text-white">
+                    <p class="text-2xl text-gray-300 game-font panel-text">
                       Anyone who is attending a university! Hackers must be 18+
                       years old and must be attending a college or university to
                       participate.<br /><br />
@@ -499,7 +527,7 @@
                     aria-controls="collapse3"
                   >
                     <h6
-                      class="panel-title-edit mbr-fonts-style mb-0 display-7 text-white"
+                      class="text-white game-font panel-title-edit mb-0 text-4xl"
                     >
                       <strong
                         >Do I need to know how to code in order to
@@ -519,7 +547,7 @@
                   style="visibility: visible;"
                 >
                   <div class="panel-body">
-                    <p class="mbr-fonts-style panel-text display-7 text-white">
+                    <p class="text-2xl text-gray-300 game-font panel-text">
                       You do NOT need to know how to code in order to
                       participate! Hack@WPI 2023 is open to all kinds of STEAM
                       disciplines, and we encourage both software and hardware
@@ -543,7 +571,7 @@
                     aria-controls="collapse4"
                   >
                     <h6
-                      class="panel-title-edit mbr-fonts-style mb-0 display-7 text-white"
+                      class="text-white game-font panel-title-edit mb-0 text-4xl"
                     >
                       <strong>Will hardware and tools be offered?</strong>
                     </h6>
@@ -560,7 +588,7 @@
                   style="visibility: visible;"
                 >
                   <div class="panel-body">
-                    <p class="mbr-fonts-style panel-text display-7 text-white">
+                    <p class="text-2xl text-gray-300 game-font panel-text">
                       Tools, hardware and machines are available to WPI students
                       in the Makerspace in the Innovation Studio; students
                       should see
@@ -587,7 +615,7 @@
                     aria-controls="collapse5"
                   >
                     <h6
-                      class="panel-title-edit mbr-fonts-style mb-0 display-7 text-white"
+                      class="text-white game-font panel-title-edit mb-0 text-4xl"
                     >
                       <strong>How big can the teams be?</strong>
                     </h6>
@@ -604,7 +632,7 @@
                   style="visibility: visible;"
                 >
                   <div class="panel-body">
-                    <p class="mbr-fonts-style panel-text display-7 text-white">
+                    <p class="text-2xl text-gray-300 game-font panel-text">
                       Teams can range anywhere from 1 to 5 people.<br /><br />
                     </p>
                   </div>
@@ -623,11 +651,11 @@
                     aria-controls="collapse6"
                   >
                     <h6
-                      class="panel-title-edit mbr-fonts-style mb-0 display-7 text-white"
+                      class="text-white game-font panel-title-edit mb-0 text-4xl"
                     >
                       <strong
                         >What if I'm a WPI student living off-campus and wish to
-                        participate the event overnight?</strong
+                        work overnight?</strong
                       >
                     </h6>
                     <span
@@ -643,7 +671,7 @@
                   style="visibility: visible;"
                 >
                   <div class="panel-body">
-                    <p class="mbr-fonts-style panel-text display-7 text-white z-[200]">
+                    <p class="text-2xl text-gray-300 game-font panel-text">
                       The venue will be open over night for all participants to
                       stay and work!
                     </p>
