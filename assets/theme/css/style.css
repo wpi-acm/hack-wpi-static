@@ -825,6 +825,13 @@ body {
   font-style: normal;
 }
 
+.roboto-mono-font {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @keyframes cycle-pulse {
   0% {
     filter: invert(42%) sepia(77%) saturate(2318%) hue-rotate(334deg) brightness(96%) contrast(95%);
