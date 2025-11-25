@@ -90,41 +90,69 @@
   <body onload="init()">
     <script type="text/javascript" src="assets/countdown/script.js"></script>
   
-      <div class="flex text-3xl border-zinc-700 fixed w-screen border-b z-50 text-white game-font items-center justify-center flex-row py-3 pl-2 pr-40" style="background-color: #171717"> 
-        <a href="https://hack.wpi.edu" class="ml-4 ">
+      <div class="flex text-3xl border-zinc-700 fixed w-screen border-b z-50 text-white game-font items-center justify-center flex-row py-3 pl-2 pr-40" style="background-color: #171717">
+        <a href="https://hack.wpi.edu" class="ml-4">
           <img
             src="assets/images/goathacks2024goat3-96x106.png"
             alt="Hack@WPI 2021"
             style="height: 3.2rem"
           />
         </a>
-        <div class="ml-auto mr-5">
-          <a
-            href="index.html#header12-2"
-            class="hover:text-red-500 duration-100"
-            >REGISTER</a>
-        </div>
-        <div class="mr-5">
-          <a
-            href="index.html#gallery6-1g"
-            class="hover:text-red-500 duration-100"
-            >SPONSORS</a>
-        </div>
-        <div class="mr-5">
-          <a
-            href="index.html#content17-y"
-            class="hover:text-red-500 duration-100"
-            >FAQ</a>
-        </div>
-        <div class="mr-5">
-          <a
-            href="index.html#contacts2-13"
-            class="hover:text-red-500 duration-100"
-            >CONTACT</a
-          >
-        </div>
-      </div>
 
+        <!-- MOBILE: hamburger button -->
+        <button id="hamburger" aria-label="Menu" aria-expanded="false" class="ml-auto mr-4 md:hidden inline-flex items-center p-2 rounded hover:bg-zinc-800 focus:outline-none">
+          <!-- simple hamburger icon -->
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- DESKTOP: inline links (hidden on small screens) -->
+        <div class="hidden md:flex ml-auto mr-5 items-center">
+          <div class="mr-5">
+            <a href="index.html#header12-2" class="hover:text-red-500 duration-100">REGISTER</a>
+          </div>
+          <div class="mr-5">
+            <a href="index.html#gallery6-1g" class="hover:text-red-500 duration-100">SPONSORS</a>
+          </div>
+          <div class="mr-5">
+            <a href="index.html#content17-y" class="hover:text-red-500 duration-100">FAQ</a>
+          </div>
+          <div class="mr-5">
+            <a href="index.html#contacts2-13" class="hover:text-red-500 duration-100">CONTACT</a>
+          </div>
+        </div>
+
+        <!-- MOBILE: dropdown menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-[#171717] border-b border-zinc-700 z-40">
+          <nav class="flex flex-col py-2">
+            <a href="index.html#header12-2" class="block px-4 py-3 hover:bg-zinc-900 hover:text-red-500">REGISTER</a>
+            <a href="index.html#gallery6-1g" class="block px-4 py-3 hover:bg-zinc-900 hover:text-red-500">SPONSORS</a>
+            <a href="index.html#content17-y" class="block px-4 py-3 hover:bg-zinc-900 hover:text-red-500">FAQ</a>
+            <a href="index.html#contacts2-13" class="block px-4 py-3 hover:bg-zinc-900 hover:text-red-500">CONTACT</a>
+          </nav>
+        </div>
+
+        <script>
+          (function () {
+            var btn = document.getElementById('hamburger');
+            var menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function () {
+              var isHidden = menu.classList.contains('hidden');
+              menu.classList.toggle('hidden', !isHidden ? true : false);
+              btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+            });
+            // close menu on resize to desktop
+            window.addEventListener('resize', function () {
+              if (window.innerWidth >= 768) {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+              }
+            });
+          })();
+        </script>
+      </div>
     <section data-bs-version="5.1" class="" id="image3-1">
       <div
         class="h-screen px-20 align-items-center flex flex-row items-center justify-center"
