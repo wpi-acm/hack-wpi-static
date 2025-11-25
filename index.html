@@ -108,7 +108,7 @@
         </button>
 
         <!-- DESKTOP: inline links (hidden on small screens) -->
-        <div class="hidden md:flex ml-auto mr-5 items-center">
+        <div class="hidden md:flex md:visible ml-auto mr-5 items-center">
           <div class="mr-5">
             <a href="index.html#header12-2" class="hover:text-red-500 duration-100">REGISTER</a>
           </div>
@@ -165,7 +165,7 @@
           <div
             class="mbr-section-btn mt-3 d-flex flex-column align-items-center"
           >
-            <h2 class="text-white mt-4 game-font text-6xl">JAN 16th - 18th</h2>
+            <h2 class="text-white mt-4 game-font text-6xl text-center">JAN 16th - 18th</h2>
             <a
               class="btn btn-secondary display-4"
               href="https://docs.google.com/forms/d/e/1FAIpQLSfD0vpWA2FSYyPD__L9QzhuSpbVGjQFsxIK0A-MBse4ZZPv2Q/viewform?usp=header"
@@ -211,7 +211,7 @@
     >
   
 
-      <div class="grid grid-cols-2 gap- mb-56">
+      <div class="grid md:grid-cols-2 grid-cols-1 pl-8 md:pl-0 gap-8 md:gap-0 mb-56 ">
         <div class="pr-2">
           <div class="image-container">
             <img
@@ -219,29 +219,30 @@
             />
           </div>
         </div>
-        <div class="flex items-end pl-32 pr-16 justify-center flex-col">
+        <div class="flex items-end pl-8 pr-4 md:pl-32 md:pr-16 justify-center flex-col">
           <h1 class=" text-right text-red-500 text-7xl mb-4  game-font">BUILD ANYTHING.</h1>
           <p class="text-right text-white text-3xl font-semibold roboto-mono-font">At GoatHacks, the sky is the limit with what you can create. We support all projects, virtual or physical, and will the resources you need to help you build your project.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-2 my-56">
+      <div class="grid md:grid-cols-2 grid-cols-1 pl-8 md:pl-0 gap-8 md:gap-2 my-56">
     
-        <div class="flex items-start pr-32 pl-16 justify-center flex-col">
-          <h1 class=" text-left text-red-500 text-7xl mb-4  game-font">COLLABORATE.</h1>
-          <p class="text-left text-white text-3xl font-semibold roboto-mono-font">Find your people at GoatHacks. Come with a team, or find a new one at our event! (Or go solo, if that's your thing).</p>
-        </div>
-
-        <div class="pl-2">
+        <div class="pl-2 order-1 md:!order-2">
           <div class="image-container-alt after::-left-24">
             <img
               src="assets/images/img-4527-886x591.jpg"
             />
           </div>
         </div>
+        
+        <div class="flex items-start pr-8 pl-4 md:pr-32 md:pl-16 justify-center flex-col order-2 md:!order-1">
+          <h1 class=" text-left text-red-500 text-7xl mb-4  game-font">COLLABORATE.</h1>
+          <p class="text-left text-white text-3xl font-semibold roboto-mono-font">Find your people at GoatHacks. Come with a team, or find a new one at our event! (Or go solo, if that's your thing).</p>
+        </div>
+
       </div>
       
-      <div class="grid grid-cols-2 gap- mb-56">
+      <div class="grid md:grid-cols-2 pr-4 pl-8 md:p-0 grid-cols-1 md:gap-0 gap-8 mb-56">
         <div class="pr-2">
           <div class="image-container">
             <img
@@ -249,7 +250,7 @@
             />
           </div>
         </div>
-        <div class="flex items-end pl-32 pr-16 justify-center flex-col">
+        <div class="flex items-end md:pl-32 md:pr-16 justify-center flex-col">
           <h1 class=" text-right text-red-500 text-7xl mb-4  game-font">LEARN.</h1>
           <p class="text-right text-white text-3xl font-semibold roboto-mono-font">Whether you're a seasoned hacker or starting for the first time, we've got you covered. We'll be hosting workshops and events from industry experts to help you learn new skills and reinforce existing ones.</p>
         </div>
